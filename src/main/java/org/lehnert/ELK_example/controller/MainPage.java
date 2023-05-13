@@ -13,7 +13,13 @@ public class MainPage {
 
     @GetMapping
     String getMainPage() {
-        log.info("get Main Page");
+        log.info("Main Page ");
         return "main";
+    }
+
+    @GetMapping("/errormessage")
+    String getMainErrorMessage() {
+        log.error("Hi, you are on /errormessage");
+        return "errormain";
     }
 }
